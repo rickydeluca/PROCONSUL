@@ -18,7 +18,7 @@ The code of PROCONSUL was adapted from the DIAMOnD code (https://github.com/dina
 to run PROCONSUL you can use:
 
 ```
-python3 proconsul.py --network_file --seed_file --n --alpha(optional) --outfile_name(optional) --n_rounds(optional) --temp(optional) --top_p(optional) --top_k(optional)')
+python3 proconsul.py --network_file --seed_file --n --alpha(optional) --outfile_name(optional) --n_rounds(optional) --temp(optional) --top_p(optional) --top_k(optional)
 ```
 Where:
 
@@ -33,3 +33,10 @@ Where:
 | temp 	| Temperature value for the PROCONSUL softmax function. (default: 1.0) 	|
 | top_p 	| Probability threshold value for PROCONSUL nucleus sampling. If 0 no nucleus sampling. (default: 0.0) 	|
 | top_k 	| Length of the pvalues subset for Top-K sampling. If 0 no top-k sampling. (default: 0)	|
+
+For example: 
+```
+python3 proconsul.py --network_file "Example/PPI.txt" --seed_file "Example/seed_genes.txt" --n 200 --n_rounds 10 --temp 0.5
+```
+will run PROCONSUL using the network construced from the protein-protein interactions in "Example/PPI.txt" and starting from the seed genes in "Example/seed_genes.txt".
+It will predict 200 new putative disease genes, the temperature for the softmax function will be 0.5 and to reduce the stastical fluctuations it will do 10 rounds.
