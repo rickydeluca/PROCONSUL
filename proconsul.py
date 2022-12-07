@@ -1,5 +1,7 @@
-#! /usr/bin/env python
-
+"""
+This code was adapted from the DIAMOnD algorithm code aviliable at:
+https://github.com/dinaghiassian/DIAMOnD
+"""
 
 import argparse
 import csv
