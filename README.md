@@ -12,7 +12,15 @@ For this reason we implemented a method for the probabilistic exploration of con
 The code of PROCONSUL was adapted from the DIAMOnD code (https://github.com/dinaghiassian/DIAMOnD)
 
 ## Prerequisites
+Please see ```requirements.txt``` to see the list of needed packages.
+We suggest to install manually one by one, but if you prefer you can use:
 
+```
+pip install -r requirements.txt
+```
+To install all of them.
+
+We also suggest to use a __virtual environment__ using conda or venv.
 
 ## How to run
 to run PROCONSUL you can use:
